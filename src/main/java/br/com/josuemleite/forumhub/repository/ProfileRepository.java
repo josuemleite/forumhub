@@ -1,6 +1,6 @@
 package br.com.josuemleite.forumhub.repository;
 
-import br.com.josuemleite.forumhub.model.Profile;
+import br.com.josuemleite.forumhub.domain.model.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

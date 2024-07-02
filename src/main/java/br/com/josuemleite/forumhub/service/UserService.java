@@ -1,12 +1,12 @@
 package br.com.josuemleite.forumhub.service;
 
-import br.com.josuemleite.forumhub.dto.user.UserCreationDTO;
-import br.com.josuemleite.forumhub.dto.user.UserDetailingDTO;
-import br.com.josuemleite.forumhub.dto.user.UserUpdatingDTO;
-import br.com.josuemleite.forumhub.model.Answer;
-import br.com.josuemleite.forumhub.model.Profile;
-import br.com.josuemleite.forumhub.model.Topic;
-import br.com.josuemleite.forumhub.model.User;
+import br.com.josuemleite.forumhub.domain.dto.user.UserCreationDTO;
+import br.com.josuemleite.forumhub.domain.dto.user.UserDetailingDTO;
+import br.com.josuemleite.forumhub.domain.dto.user.UserUpdatingDTO;
+import br.com.josuemleite.forumhub.domain.model.Answer;
+import br.com.josuemleite.forumhub.domain.model.Profile;
+import br.com.josuemleite.forumhub.domain.model.Topic;
+import br.com.josuemleite.forumhub.domain.model.User;
 import br.com.josuemleite.forumhub.repository.UserRepository;
 import br.com.josuemleite.forumhub.service.exceptions.DatabaseException;
 import br.com.josuemleite.forumhub.service.exceptions.ResourceNotFoundException;
@@ -17,6 +17,9 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -24,7 +27,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
@@ -134,5 +137,10 @@ public class UserService {
                 user.setAnswers(answers);
             }
         }
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findEmail(username);
     }
 }

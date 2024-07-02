@@ -1,10 +1,10 @@
 package br.com.josuemleite.forumhub.controller;
 
-import br.com.josuemleite.forumhub.dto.answer.AnswerCreationDTO;
-import br.com.josuemleite.forumhub.dto.answer.AnswerDetailingDTO;
-import br.com.josuemleite.forumhub.dto.answer.AnswerListingDTO;
-import br.com.josuemleite.forumhub.dto.answer.AnswerUpdatingDTO;
-import br.com.josuemleite.forumhub.model.Answer;
+import br.com.josuemleite.forumhub.domain.dto.answer.AnswerCreationDTO;
+import br.com.josuemleite.forumhub.domain.dto.answer.AnswerDetailingDTO;
+import br.com.josuemleite.forumhub.domain.dto.answer.AnswerListingDTO;
+import br.com.josuemleite.forumhub.domain.dto.answer.AnswerUpdatingDTO;
+import br.com.josuemleite.forumhub.domain.model.Answer;
 import br.com.josuemleite.forumhub.service.AnswerService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

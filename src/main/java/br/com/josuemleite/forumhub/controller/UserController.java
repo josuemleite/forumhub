@@ -1,10 +1,10 @@
 package br.com.josuemleite.forumhub.controller;
 
-import br.com.josuemleite.forumhub.dto.user.UserCreationDTO;
-import br.com.josuemleite.forumhub.dto.user.UserDetailingDTO;
-import br.com.josuemleite.forumhub.dto.user.UserListingDTO;
-import br.com.josuemleite.forumhub.dto.user.UserUpdatingDTO;
-import br.com.josuemleite.forumhub.model.User;
+import br.com.josuemleite.forumhub.domain.dto.user.UserCreationDTO;
+import br.com.josuemleite.forumhub.domain.dto.user.UserDetailingDTO;
+import br.com.josuemleite.forumhub.domain.dto.user.UserListingDTO;
+import br.com.josuemleite.forumhub.domain.dto.user.UserUpdatingDTO;
+import br.com.josuemleite.forumhub.domain.model.User;
 import br.com.josuemleite.forumhub.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -80,4 +80,3 @@ public class UserController {
         }
     }
 }
-

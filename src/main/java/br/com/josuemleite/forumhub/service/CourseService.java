@@ -1,10 +1,10 @@
 package br.com.josuemleite.forumhub.service;
 
-import br.com.josuemleite.forumhub.dto.course.CourseCreationDTO;
-import br.com.josuemleite.forumhub.dto.course.CourseDetailingDTO;
-import br.com.josuemleite.forumhub.dto.course.CourseUpdatingDTO;
-import br.com.josuemleite.forumhub.model.Course;
-import br.com.josuemleite.forumhub.model.Topic;
+import br.com.josuemleite.forumhub.domain.dto.course.CourseCreationDTO;
+import br.com.josuemleite.forumhub.domain.dto.course.CourseDetailingDTO;
+import br.com.josuemleite.forumhub.domain.dto.course.CourseUpdatingDTO;
+import br.com.josuemleite.forumhub.domain.model.Course;
+import br.com.josuemleite.forumhub.domain.model.Topic;
 import br.com.josuemleite.forumhub.repository.CourseRepository;
 import br.com.josuemleite.forumhub.service.exceptions.DatabaseException;
 import br.com.josuemleite.forumhub.service.exceptions.ResourceNotFoundException;

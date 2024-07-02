@@ -1,10 +1,10 @@
 package br.com.josuemleite.forumhub.service;
 
-import br.com.josuemleite.forumhub.dto.profile.ProfileCreationDTO;
-import br.com.josuemleite.forumhub.dto.profile.ProfileDetailingDTO;
-import br.com.josuemleite.forumhub.dto.profile.ProfileUpdatingDTO;
-import br.com.josuemleite.forumhub.model.Profile;
-import br.com.josuemleite.forumhub.model.User;
+import br.com.josuemleite.forumhub.domain.dto.profile.ProfileCreationDTO;
+import br.com.josuemleite.forumhub.domain.dto.profile.ProfileDetailingDTO;
+import br.com.josuemleite.forumhub.domain.dto.profile.ProfileUpdatingDTO;
+import br.com.josuemleite.forumhub.domain.model.Profile;
+import br.com.josuemleite.forumhub.domain.model.User;
 import br.com.josuemleite.forumhub.repository.ProfileRepository;
 import br.com.josuemleite.forumhub.service.exceptions.DatabaseException;
 import br.com.josuemleite.forumhub.service.exceptions.ResourceNotFoundException;

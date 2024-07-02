@@ -1,6 +1,6 @@
 package br.com.josuemleite.forumhub.repository;
 
-import br.com.josuemleite.forumhub.model.Answer;
+import br.com.josuemleite.forumhub.domain.model.Answer;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

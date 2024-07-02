@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "api.security.token.secret",
+      "type": "java.lang.String",
+      "description": "Definition of the password to be used by the JWT token."
+    }
+  ]
+}

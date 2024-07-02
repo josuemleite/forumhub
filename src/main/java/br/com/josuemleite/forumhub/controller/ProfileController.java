@@ -1,10 +1,10 @@
 package br.com.josuemleite.forumhub.controller;
 
-import br.com.josuemleite.forumhub.dto.profile.ProfileCreationDTO;
-import br.com.josuemleite.forumhub.dto.profile.ProfileDetailingDTO;
-import br.com.josuemleite.forumhub.dto.profile.ProfileListingDTO;
-import br.com.josuemleite.forumhub.dto.profile.ProfileUpdatingDTO;
-import br.com.josuemleite.forumhub.model.Profile;
+import br.com.josuemleite.forumhub.domain.dto.profile.ProfileCreationDTO;
+import br.com.josuemleite.forumhub.domain.dto.profile.ProfileDetailingDTO;
+import br.com.josuemleite.forumhub.domain.dto.profile.ProfileListingDTO;
+import br.com.josuemleite.forumhub.domain.dto.profile.ProfileUpdatingDTO;
+import br.com.josuemleite.forumhub.domain.model.Profile;
 import br.com.josuemleite.forumhub.service.ProfileService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
