@@ -6,6 +6,7 @@ import br.com.josuemleite.forumhub.domain.dto.profile.ProfileListingDTO;
 import br.com.josuemleite.forumhub.domain.dto.profile.ProfileUpdatingDTO;
 import br.com.josuemleite.forumhub.domain.model.Profile;
 import br.com.josuemleite.forumhub.service.ProfileService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -22,6 +23,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/perfis")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class ProfileController {
 
     private final ProfileService service;

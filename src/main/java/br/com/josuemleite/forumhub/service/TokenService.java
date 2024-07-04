@@ -1,6 +1,7 @@
 package br.com.josuemleite.forumhub.service;
 
 import br.com.josuemleite.forumhub.domain.model.User;
+import br.com.josuemleite.forumhub.service.exceptions.InvalidOrExpiredTokenException;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
@@ -40,7 +41,7 @@ public class TokenService {
                     .verify(tokenJWT)
                     .getSubject();
         } catch (JWTVerificationException exception) {
-            throw new RuntimeException("Invalid or expired JWT token.");
+            throw new InvalidOrExpiredTokenException(tokenJWT);
         }
     }
 

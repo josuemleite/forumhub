@@ -6,6 +6,7 @@ import br.com.josuemleite.forumhub.domain.dto.user.UserListingDTO;
 import br.com.josuemleite.forumhub.domain.dto.user.UserUpdatingDTO;
 import br.com.josuemleite.forumhub.domain.model.User;
 import br.com.josuemleite.forumhub.service.UserService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -22,6 +23,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/usuarios")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class UserController {
 
     private final UserService service;

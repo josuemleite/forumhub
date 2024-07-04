@@ -6,6 +6,7 @@ import br.com.josuemleite.forumhub.domain.dto.answer.AnswerListingDTO;
 import br.com.josuemleite.forumhub.domain.dto.answer.AnswerUpdatingDTO;
 import br.com.josuemleite.forumhub.domain.model.Answer;
 import br.com.josuemleite.forumhub.service.AnswerService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -22,6 +23,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/respostas")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class AnswerController {
 
     private final AnswerService service;

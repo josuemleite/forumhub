@@ -6,6 +6,7 @@ import br.com.josuemleite.forumhub.domain.dto.course.CourseListingDTO;
 import br.com.josuemleite.forumhub.domain.dto.course.CourseUpdatingDTO;
 import br.com.josuemleite.forumhub.domain.model.Course;
 import br.com.josuemleite.forumhub.service.CourseService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -22,6 +23,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/cursos")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class CourseController {
 
     private final CourseService service;

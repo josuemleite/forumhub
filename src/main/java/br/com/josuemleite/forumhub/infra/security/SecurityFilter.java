@@ -1,4 +1,4 @@
-package br.com.josuemleite.forumhub.security;
+package br.com.josuemleite.forumhub.infra.security;
 
 import br.com.josuemleite.forumhub.service.TokenService;
 import br.com.josuemleite.forumhub.service.UserService;
@@ -26,7 +26,7 @@ public class SecurityFilter extends OncePerRequestFilter {
     private final UserService userService;
 
     @Override
-    protected void doFilterInternal(@Nonnull HttpServletRequest request, @NonNull HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(@Nonnull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain filterChain) throws ServletException, IOException {
         String tokenJWT = retrieveToken(request);
 
         if (tokenJWT != null) {

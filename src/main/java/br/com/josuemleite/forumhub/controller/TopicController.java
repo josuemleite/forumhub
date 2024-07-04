@@ -6,6 +6,7 @@ import br.com.josuemleite.forumhub.domain.dto.topic.TopicListingDTO;
 import br.com.josuemleite.forumhub.domain.dto.topic.TopicUpdatingDTO;
 import br.com.josuemleite.forumhub.domain.model.Topic;
 import br.com.josuemleite.forumhub.service.TopicService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -22,6 +23,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("topicos")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "bearer-key")
 public class TopicController {
 
     private final TopicService service;
