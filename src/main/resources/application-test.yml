@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: api
+  datasource:
+    url: jdbc:postgresql://localhost/forumhub_test
